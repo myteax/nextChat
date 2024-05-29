@@ -1,7 +1,7 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 import { NextApiRequest, NextApiResponse } from "next";
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@nextchatcluster.lm1h7ah.mongodb.net/?retryWrites=true&w=majority&appName=nextchatcluster`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`;
 export const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
